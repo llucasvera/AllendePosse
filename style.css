@@ -1,0 +1,754 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografías */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a1b2b;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  background: linear-gradient(to bottom, rgba(10, 27, 43, 0.8), rgba(10, 27, 43, 0.95)),
+              url(scr/scr_landing_page/hero-picture.webp) center/cover no-repeat;
+  color: white;
+}
+.hero img{
+  width: 6rem;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-family: "STIX Two Text", serif;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: "STIX Two Text", serif;
+}
+.cta-button {
+  background-color: #bfa355;
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: "STIX Two Text", serif;
+}
+.cta-button:hover {
+  background-color: #fcc680;
+  color: #0a132e;
+  transition: 1s;
+}
+
+/* Valores */
+.valores {
+  background-color: #ffffff;
+  color: #0a1b2b;
+  padding: 80px 20px;
+  text-align: center;
+}
+.valores .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.valor {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.valor:hover {
+  transform: translateY(-5px);
+}
+.icono-valor {
+  font-size: 3rem;
+  color: #bfa355; /* bronce */
+  margin-bottom: 1rem;
+}
+
+.valor h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Contacto */
+.contacto {
+  padding: 80px 20px;
+  background-color: #0a1b2b;
+  color: white;
+}
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.formulario {
+  flex: 1;
+  min-width: 300px;
+}
+.formulario h2 {
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+.formulario form input,
+.formulario form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+.formulario button {
+  background-color: #bfa355;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Playfair Display', serif;
+}
+.formulario button:hover {
+  background-color: #fcc680;
+  color: #0a132e;
+  transition: 1s;
+}
+
+.info-contacto {
+  flex: 1;
+  min-width: 300px;
+}
+.info-contacto iframe {
+  margin-top: 15px;
+  border-radius: 8px;
+}
+.social a img {
+  width: 24px;
+  margin: 10px 10px 0 0;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.social a img:hover {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .valores .container,
+  .contacto-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.acerca {
+  position: relative;
+  background: url('') center/cover no-repeat;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acerca .overlay {
+  background-color: rgba(10, 27, 43, 0.85); 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.acerca .contenido {
+  max-width: 800px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.acerca h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #bfa355; 
+  font-family: "STIX Two Text", serif;
+}
+
+.acerca p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.acerca .btn {
+  background-color: #bfa355;
+  color: #fff;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.acerca .btn:hover {
+  background-color: #fcc680;
+  color: #0a132e;
+  transition: 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rol-abogado {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  padding: 80px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.rol-abogado .contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.rol-abogado h2 {
+  color: #0a1b2b;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.rol-abogado p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+.rol-abogado p.nota {
+  color: #555;
+  font-style: italic;
+}
+.cita-abogado {
+  position: relative;
+  background-image: url('scr/scr_landing_page/contact-adolfo-bg-Editado.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cita-abogado .overlay {
+  background-color: rgba(10, 20, 40, 0.7); /* azul oscuro semitransparente */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.cita-contenido {
+  max-width: 800px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-style: italic;
+  padding: 40px;
+  border-left: 4px solid #bfa355; /* bronce */
+}
+
+.cita-contenido blockquote {
+  margin: 0;
+}
+
+.titulo-seccion{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-family: "STIX Two Text", serif;
+  color: #bfa355;
+  font-size: 2rem;
+}
+
+.grid-casos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.nota-caso {
+  background-color: #fff;
+  border-left: 4px solid #bfa355;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nota-caso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-caso {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  filter: grayscale(30%) brightness(90%);
+}
+
+.contenido-caso {
+  padding: 25px;
+}
+
+.nota-caso h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0a132e;
+}
+
+.nota-caso .fecha {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.nota-caso .resumen {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.btn-leer-mas {
+  color: #bfa355;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.btn-leer-mas:hover {
+  color: #fcc680;
+}
+
+
+.ver-mas-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-ver-mas {
+  background-color: #bfa355;
+  color: #fff;
+  padding: 12px 50px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  font-family: "STIX Two Text", serif;
+  border: 3px solid #0a1b2b;
+}
+
+.btn-ver-mas:hover {
+  background-color: #fcc680;
+  color: #0a132e;
+  transition: 1s;
+  transform: translateY(-2px);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0b1f33; /* Azul marino */
+  padding: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+  object-fit: contain;
+  
+  
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "STIX Two Text", serif;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #bfa355; /* bronce */
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: #bfa355;
+}
+
+
+.footer {
+  background-color: #0b1f33; /* azul marino */
+  color: white;
+  padding: 4rem 2rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-column h3 {
+  color: #bfa355; 
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "STIX Two Text", serif;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #bfa355;
+}
+
+.footer-logo {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer-social a {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #bfa355;
+}
+
+.slogan{
+  font-family: "STIX Two Text", serif;
+}
+
+.footer h3{
+  font-family: "STIX Two Text", serif;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #bfa355;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+  background-color: #d2b15c;
+}
+
+.whatsapp-button img {
+  width: 40px;
+  height: 40px;
+  
+}
+.info-contacto img{
+  height: 1.5rem;
+  filter: invert();
+  padding-right: 0.2rem;
+
+}
+.enlace{
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+.enlace :hover{
+  color: #8a6b23;
+}
+.enlace-f img{
+  width: 1.2rem;
+  filter: invert();
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Menú base */
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #c1a95a;
+}
+
+/* Hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container-header {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    flex-direction: column;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle:checked ~ .nav {
+    max-height: 400px;
+    margin-top: 1rem;
+  }
+}
+
+
+.servicios {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.container-servicios {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.titulo-servicios {
+  font-size: 2.2rem;
+  color: #c1a95a;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: "STIX Two Text", serif;
+}
+
+.lista-servicios {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.lista-servicios li {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #1d1f4e;
+  line-height: 1.6;
+  background: #f8f8f8;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.lista-servicios li:hover {
+  background: #eef0f4;
+}
+
+.lista-servicios i {
+  font-size: 1.3rem;
+  color: #c1a95a;
+  margin-right: 0.8rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lista-servicios {
+    grid-template-columns: 1fr;
+  }
+}
