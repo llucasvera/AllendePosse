@@ -47,7 +47,7 @@
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #cd7f32; /* bronce */
+  background-color: #bfa355; /* bronce */
   left: 0;
   bottom: -4px;
   transition: width 0.3s ease;
@@ -58,7 +58,7 @@
 }
 
 .nav a:hover {
-  color: #cd7f32;
+  color: #bfa355;
 }
 
 .perfil-body {
@@ -163,7 +163,7 @@
 }
 
 .footer-column h3 {
-  color: #cd7f32; /* bronce */
+  color: #bfa355; /* bronce */
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -186,7 +186,7 @@
 }
 
 .footer-column ul li a:hover {
-  color: #cd7f32;
+  color: #bfa355;
 }
 
 .footer-logo {
@@ -638,4 +638,15 @@ body {
 .profile-content {
   width: 100%;
   box-sizing: border-box;
+}
+
+
+.footer-column a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a :hover{
+  color: #bfa355;
+  transition: 1s;
 }

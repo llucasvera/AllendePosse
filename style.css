@@ -552,6 +552,16 @@ section {
   animation: fadeOut 0.5s forwards;
 }
 
+.footer-column a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a :hover{
+  color: #bfa355;
+  transition: 1s;
+}
+
 @keyframes fadeOut {
   to {
     opacity: 0;

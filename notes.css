@@ -265,6 +265,7 @@
 }
 
 
+
 .whatsapp-button {
   position: fixed;
   bottom: 30px;
@@ -605,4 +606,15 @@ img {
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
+}
+
+
+.footer-column a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column a :hover{
+  color: #bfa355;
+  transition: 1s;
 }
